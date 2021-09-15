@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:LoginMvvm="clr-namespace:LoginMvvm.Views"
+             xmlns:local="clr-namespace:LoginMvvm.Views" 
+             x:Class="LoginMvvm.MainPage" Title="Main Page">
+    <!--<local:HomePage/>
+    <local:MyAccountPage/>
+    <local:ExpanderPage/>-->
+    <ContentPage.Content>
+      <Grid RowDefinitions="*,*">
+        <StackLayout>
+        <CarouselView ItemsSource="{Binding ImagesList}"
+                      Margin="10"
+                      IndicatorView="IndicatorView">
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout>
+                        <Frame HasShadow="True"
+                               Margin="5"
+                               Padding="5">
+                            <Image Source="{Binding }"
+                                   Aspect="AspectFit"/>
+                        </Frame>
+                    </StackLayout>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+
+        </CarouselView>
+        <IndicatorView x:Name="IndicatorView"
+                       IndicatorColor="LightGray"
+                       SelectedIndicatorColor="Black"
+                       HorizontalOptions="Center">
+            
+        </IndicatorView>
+        </StackLayout>
+    </Grid>
+        
+    <!--<StackLayout>
+       
+        <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand" WidthRequest="400" HorizontalOptions="Center">
+            <local:MasterDetailsPage Title="Username" HorizontalOptions="Center" Margin="20,5,20,10" />
+            <LoginMvvm:MasterDetailsPage Title="Password" IsPassword="true" HorizontalOptions="Center" Margin="20,10,20,10" />
+            <Button Text="Sign In" HeightRequest="46" BackgroundColor="#00C0FF" TextColor="#EFFBFF" Margin="20,10,20,5" />
+        </StackLayout>
+            
+    </StackLayout>-->
+
+
+
+   
+        </ContentPage.Content>
+</ContentPage>

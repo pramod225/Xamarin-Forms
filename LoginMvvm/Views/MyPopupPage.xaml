@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<pages:PopupPage
+ xmlns:pages="http://rotorgames.com"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="LoginMvvm.Views.MyPopupPage">
+    <pages:PopupPage.Animation>
+        <pages:ScaleAnimation 
+            PositionIn="Bottom"
+            PositionOut="Bottom"
+           
+            DurationIn="400"
+            DurationOut="300"
+            EasingIn="SinOut"
+            EasingOut="SinIn"
+            HasBackgroundAnimation="True"/>
+    </pages:PopupPage.Animation>
+    <StackLayout VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand" >
+        <Frame CornerRadius="20"  HorizontalOptions="FillAndExpand" HeightRequest="300" >
+            <StackLayout>
+                <Label Text="Hello world"></Label>
+                <Label Text="Forget password"></Label>
+                <Button  Text="close" Clicked="Close_Clicked"/>
+            </StackLayout>
+        </Frame>
+
+    </StackLayout>
+
+</pages:PopupPage>

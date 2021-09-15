@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:custom="clr-namespace:LoginMvvm" xmlns:custom1="clr-namespace:LoginMvvm.Models"
+    xmlns:Page="clr-namespace:LoginMvvm.Views"
+    x:Class="LoginMvvm.Views.LoginPage">
+    <!--<ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="custom:RoundedEntry">
+                <Style.Triggers>
+                    <Trigger TargetType="custom:RoundedEntry" Property="IsFocused" Value="True">
+                        <Setter Property="BackgroundColor" Value="LightSlateGray"/>
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>-->
+    <ContentPage.Content>
+
+       
+<StackLayout Padding="10" Margin="0,0,0,30">
+     
+       <Label Text="Log in "  TextColor="Black" Margin="0,5,0,80" />   
+    
+<Page:LoginFloatingPage  x:Name="userName" Title="User Name"  Text="{Binding LoginUser.UserName}" />
+    <Page:LoginFloatingPage x:Name="password" Title="Password" Text="{Binding LoginUser.Password}"  IsPassword="True" Margin="0,70,0,0" />
+    <Label HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Margin="0,30,0,0">
+    <Label.FormattedText>
+        <FormattedString>
+            <Span Text="Forgot password?"
+                  TextColor="LightSkyBlue">
+                <Span.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                                          
+                </Span.GestureRecognizers>
+            </Span>
+        </FormattedString>
+    </Label.FormattedText>
+</Label>
+  
+
+    <custom1:RoundedButton HorizontalOptions="Center"  BackgroundColor="LightSkyBlue" TextColor="White" Text="Login" Command="{Binding LoginCommand}" Margin="0,20,0,0" >
+        <Button.Triggers>
+            <MultiTrigger TargetType="Button">
+                <MultiTrigger.Conditions >
+                    <BindingCondition Binding="{Binding Source={x:Reference userName},Path=Text.Length}" Value="0"/>
+                    <BindingCondition Binding="{Binding Source={x:Reference password},Path=Text.Length}" Value="0"/>
+                </MultiTrigger.Conditions>
+                <Setter Property="IsEnabled" Value="False"/>
+            </MultiTrigger>
+        </Button.Triggers>
+    </custom1:RoundedButton>
+    <Label HorizontalOptions="Center" Margin="0,20,0,0">
+        <Label.FormattedText>
+            <FormattedString>
+                <Span Text="Don't have an account?" TextColor="Gray"/>
+            </FormattedString>
+        </Label.FormattedText>
+    </Label>
+    <custom1:RegisterButton Text="Register" BackgroundColor="White" HorizontalOptions="Center"  TextColor="SkyBlue" Command="{Binding SignUp}"/>
+    <!--<Label HorizontalOptions="Center" Margin="0,20,0,0">
+<Label.FormattedText>
+<FormattedString>
+<Span Text="Don't have an account?" TextColor="Gray"/>
+    <Span Text="Sign Up" TextDecorations="Underline" TextColor="Gray"/>
+</FormattedString>
+</Label.FormattedText>
+        <Label.GestureRecognizers>
+            <TapGestureRecognizer Command="{Binding SignUp}"/>
+
+                </Label.GestureRecognizers>
+    </Label>-->
+    
+</StackLayout>
+    </ContentPage.Content>
+      
+</ContentPage>

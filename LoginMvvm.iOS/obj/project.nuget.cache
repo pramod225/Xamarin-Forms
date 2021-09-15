@@ -1,0 +1,30 @@
+{
+  "version": 2,
+  "dgSpecHash": "/ZuoBMD7XnBclDbXV2e6En6nf6dFIzkIuJFZ3bm3x5xzZCv1U8Skx+b7E/Ylxf1L2uvUcLz5mzkY+NmDn1y9fQ==",
+  "success": true,
+  "projectFilePath": "/Users/dmi-it/Documents/Xamrin practices/LoginMvvm/LoginMvvm.iOS/LoginMvvm.iOS.csproj",
+  "expectedPackageFiles": [
+    "/Users/dmi-it/.nuget/packages/fody/6.5.2/fody.6.5.2.nupkg.sha512",
+    "/Users/dmi-it/.nuget/packages/jetbrains.annotations/2021.2.0/jetbrains.annotations.2021.2.0.nupkg.sha512",
+    "/Users/dmi-it/.nuget/packages/microsoft.csharp/4.5.0/microsoft.csharp.4.5.0.nupkg.sha512",
+    "/Users/dmi-it/.nuget/packages/mongodb.bson/2.11.3/mongodb.bson.2.11.3.nupkg.sha512",
+    "/Users/dmi-it/.nuget/packages/realm/10.3.0/realm.10.3.0.nupkg.sha512",
+    "/Users/dmi-it/.nuget/packages/realm.fody/10.3.0/realm.fody.10.3.0.nupkg.sha512",
+    "/Users/dmi-it/.nuget/packages/remotion.linq/2.2.0/remotion.linq.2.2.0.nupkg.sha512",
+    "/Users/dmi-it/.nuget/packages/rg.plugins.popup/2.0.0.12/rg.plugins.popup.2.0.0.12.nupkg.sha512",
+    "/Users/dmi-it/.nuget/packages/syncfusion.licensing/19.2.0.62/syncfusion.licensing.19.2.0.62.nupkg.sha512",
+    "/Users/dmi-it/.nuget/packages/syncfusion.xamarin.buttons/19.2.0.57/syncfusion.xamarin.buttons.19.2.0.57.nupkg.sha512",
+    "/Users/dmi-it/.nuget/packages/syncfusion.xamarin.core/19.2.0.62/syncfusion.xamarin.core.19.2.0.62.nupkg.sha512",
+    "/Users/dmi-it/.nuget/packages/syncfusion.xamarin.sfpopuplayout/19.2.0.62/syncfusion.xamarin.sfpopuplayout.19.2.0.62.nupkg.sha512",
+    "/Users/dmi-it/.nuget/packages/system.buffers/4.4.0/system.buffers.4.4.0.nupkg.sha512",
+    "/Users/dmi-it/.nuget/packages/system.codedom/4.5.0/system.codedom.4.5.0.nupkg.sha512",
+    "/Users/dmi-it/.nuget/packages/system.dynamic.runtime/4.3.0/system.dynamic.runtime.4.3.0.nupkg.sha512",
+    "/Users/dmi-it/.nuget/packages/system.management/4.5.0/system.management.4.5.0.nupkg.sha512",
+    "/Users/dmi-it/.nuget/packages/system.numerics.vectors/4.5.0/system.numerics.vectors.4.5.0.nupkg.sha512",
+    "/Users/dmi-it/.nuget/packages/system.runtime.compilerservices.unsafe/4.5.3/system.runtime.compilerservices.unsafe.4.5.3.nupkg.sha512",
+    "/Users/dmi-it/.nuget/packages/xamarin.communitytoolkit/1.2.0/xamarin.communitytoolkit.1.2.0.nupkg.sha512",
+    "/Users/dmi-it/.nuget/packages/xamarin.essentials/1.6.1/xamarin.essentials.1.6.1.nupkg.sha512",
+    "/Users/dmi-it/.nuget/packages/xamarin.forms/5.0.0.2012/xamarin.forms.5.0.0.2012.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:LoginMvvm.ViewModel"
+    xmlns:custom="clr-namespace:LoginMvvm" xmlns:custom1="clr-namespace:LoginMvvm.Models"
+    
+    x:Class="LoginMvvm.Views.RegisterPage" Title="Registration Form " Padding="30">
+   
+    <ContentPage.Content>
+         <ScrollView>
+    <StackLayout>
+        <Label Text="First Name" />
+        <custom:RoundedEntry Text="{Binding Register.FirstName}" Placeholder="Enter First Name" x:Name="firstName"/>
+        <Label Text="Last Name" />
+        <custom:RoundedEntry Text="{Binding Register.LastName}" Placeholder="Enter Last Name" x:Name="lastName" />
+        <Label Text="Email" />
+        <custom:RoundedEntry Text="{Binding Register.Email}" Placeholder="Enter Email" x:Name="email">
+            <Entry.Triggers>
+                <EventTrigger Event="TextChanged">
+                    <local:ValidationsViewModel/>
+                </EventTrigger>
+            </Entry.Triggers>
+        </custom:RoundedEntry>
+        <Label Text="Password" />
+        <custom:RoundedEntry x:Name="password" Text="{Binding Register.Password}" Placeholder="Enter Password" IsPassword="True" />
+            
+    
+         <custom:RoundedEntry x:Name="cpassword" BindingContext="{Binding Source={x:Reference password}, Path=Text}" Placeholder="Enter Confirm Password" IsPassword="True">
+            <Entry.Triggers >
+                <EventTrigger Event="TextChanged" >
+                     <local:PasswordValidations/>
+                </EventTrigger>
+               
+            </Entry.Triggers>
+        </custom:RoundedEntry>
+    <!--<Entry x:Name="txtpassword" Text="{Binding Register.Password}"  Placeholder="Enter Your Password" >  
+      <Entry.Behaviors>  
+        <local:ValidationsViewModel />  
+      </Entry.Behaviors>  
+    </Entry>  
+  
+    <Label Text="Confirm Password" />  
+    <Entry IsPassword="True" Placeholder="Enter same as above" Text="{Binding Register.ConfirmPassword}" >  
+      <Entry.Behaviors>  
+        <local:ValidationsViewModel />  
+        <local:CompareValidationBehavior BindingContext="{x:Reference txtpassword}" Text="{Binding Text}"/>  
+      </Entry.Behaviors>  
+    </Entry>-->  
+       
+        <Label Text="DOB" />
+       <DatePicker MaximumDate="01/01/2020" MinimumDate="01/01/1990" Format="d MMM yyyy" Date="{Binding Register.Dob}"  x:Name="dob"  />
+       <Label Text="Gender"/>
+        <!--<Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+           
+            <RadioButton Content="M" IsChecked="True" Grid.Row="0" Grid.Column="0" />
+            <RadioButton Content="F" Grid.Row="0" Grid.Column="1"/>
+            <RadioButton Content="Other" Grid.Row="0" Grid.Column="2"/>
+
+        </Grid>-->
+        <StackLayout Orientation="Horizontal" Spacing="12">
+            <RadioButton x:Name="male" Content="Male" IsChecked="True" FontSize="Small" CheckedChanged="RadioButton_CheckedChanged"  />
+            <RadioButton x:Name="female" Content="Female" FontSize="Small" CheckedChanged="RadioButton_CheckedChanged" />
+            <RadioButton x:Name="other" Content="Other" FontSize="Small" CheckedChanged="RadioButton_CheckedChanged" />
+        </StackLayout>
+   <Label Text='Mobile No'/>
+        <custom:RoundedEntry Text="{Binding Register.PhoneNo}" Placeholder="mobile number" Keyboard="Numeric" x:Name="phoneNo"/>
+        <StackLayout Orientation="Horizontal" Spacing="12">
+            <CheckBox x:Name="checkAgree"  />
+            <Label Text="I Agree to fill all are correct" VerticalTextAlignment ="Center" /> 
+        </StackLayout>
+       
+            <custom1:RoundedButton x:Name="saveButton" Text="Save" HorizontalOptions="Center"  BackgroundColor="Green"  TextColor="White" Command="{Binding SaveCommand}" IsVisible="false" >
+            <Button.Triggers>
+                <DataTrigger TargetType="Button" Binding="{Binding Source={x:Reference checkAgree},Path=IsChecked}" Value="true">
+                    <Setter Property="IsVisible" Value="True"/>
+                </DataTrigger>
+            </Button.Triggers>
+         </custom1:RoundedButton>
+        
+      <!--<StackLayout BindableLayout.ItemsSource="{Binding DataList}">
+          <BindableLayout.ItemTemplate>
+              <DataTemplate>
+                   <StackLayout >
+                                         <Label Text="{Binding FirstName}"/>
+                                            <Label Text="{Binding LastName}"/>
+                                            <Label Text="{Binding Email}"/>
+                                            <Label Text="{Binding Password}"/>
+                                            <Label Text="{Binding Dob}"/>
+                                            <Label Text="{Binding Gender}"/>
+                                            <Label Text="{Binding PhoneNo}"/>
+
+                               
+                                    </StackLayout>
+                                       
+              </DataTemplate>
+          </BindableLayout.ItemTemplate>
+      </StackLayout>-->
+          
+      
+       
+        </StackLayout>
+
+              </ScrollView>
+    </ContentPage.Content>
+       
+</ContentPage>

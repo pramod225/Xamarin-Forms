@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+    xmlns:ViewModel="clr-namespace:LoginMvvm.ViewModel"
+    x:Class="LoginMvvm.Views.ExpanderPage" Title="Expander Page">
+
+ <ContentPage.BindingContext>
+        <ViewModel:RegisterViewModel/>
+    </ContentPage.BindingContext>
+    <ScrollView Margin="20">
+        <StackLayout BindableLayout.ItemsSource="{Binding DataList}">
+            <BindableLayout.ItemTemplate>
+                <DataTemplate>
+                    <xct:Expander>
+                        <xct:Expander.Header>
+                            <Label Text="{Binding FirstName}"
+                                   FontAttributes="Bold"
+                                   TextColor="GreenYellow"                                
+                                   FontSize="Medium" />
+                        </xct:Expander.Header>
+                        <xct:Expander Padding="10">
+                            <xct:Expander.Header>
+                                <Label Text="{Binding LastName}"
+                                       FontSize="Medium" />
+                            </xct:Expander.Header>
+                                <xct:Expander.ContentTemplate>
+                                    <DataTemplate>
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="Auto" />
+                                                <ColumnDefinition Width="Auto" />
+                                                <ColumnDefinition Width="Auto" />
+                                                <ColumnDefinition Width="Auto" />
+                                            </Grid.ColumnDefinitions>
+                                            <Image Source="{Binding ImageUrl}" 
+                                                   Aspect="AspectFill"
+                                                   HeightRequest="120" 
+                                                   WidthRequest="120" />
+                                            <Label Grid.Column="1"
+                                                   Text="{Binding Email}"
+                                                   FontAttributes="Italic" />
+                                             <Label Grid.Column="2"
+                                                   Text="{Binding PhoneNo}"
+                                                   FontAttributes="Italic" />
+                                             <Label Grid.Column="3"
+                                                   Text="{Binding Gender}"
+                                                   FontAttributes="Italic" />
+                                        </Grid>
+                                    </DataTemplate>
+                                </xct:Expander.ContentTemplate>
+                        </xct:Expander>
+                    </xct:Expander>
+                </DataTemplate>
+            </BindableLayout.ItemTemplate>
+        </StackLayout>
+    </ScrollView>
+       
+</ContentPage>

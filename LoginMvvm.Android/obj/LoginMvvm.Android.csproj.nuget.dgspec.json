@@ -1,0 +1,163 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/dmi-it/Documents/Xamrin practices/LoginMvvm/LoginMvvm.Android/LoginMvvm.Android.csproj": {}
+  },
+  "projects": {
+    "/Users/dmi-it/Documents/Xamrin practices/LoginMvvm/LoginMvvm.Android/LoginMvvm.Android.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/dmi-it/Documents/Xamrin practices/LoginMvvm/LoginMvvm.Android/LoginMvvm.Android.csproj",
+        "projectName": "LoginMvvm.Android",
+        "projectPath": "/Users/dmi-it/Documents/Xamrin practices/LoginMvvm/LoginMvvm.Android/LoginMvvm.Android.csproj",
+        "packagesPath": "/Users/dmi-it/.nuget/packages/",
+        "outputPath": "/Users/dmi-it/Documents/Xamrin practices/LoginMvvm/LoginMvvm.Android/obj/",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "configFilePaths": [
+          "/Users/dmi-it/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "monoandroid11.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "monoandroid11.0": {
+            "projectReferences": {
+              "/Users/dmi-it/Documents/Xamrin practices/LoginMvvm/LoginMvvm/LoginMvvm.csproj": {
+                "projectPath": "/Users/dmi-it/Documents/Xamrin practices/LoginMvvm/LoginMvvm/LoginMvvm.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "monoandroid11.0": {
+          "dependencies": {
+            "JetBrains.Annotations": {
+              "target": "Package",
+              "version": "[2021.2.0, )"
+            },
+            "Realm": {
+              "target": "Package",
+              "version": "[10.3.0, )"
+            },
+            "Rg.Plugins.Popup": {
+              "target": "Package",
+              "version": "[2.0.0.12, )"
+            },
+            "Syncfusion.Xamarin.Buttons": {
+              "target": "Package",
+              "version": "[19.2.0.57, )"
+            },
+            "Syncfusion.Xamarin.SfPopupLayout": {
+              "target": "Package",
+              "version": "[19.2.0.62, )"
+            },
+            "Xamarin.CommunityToolkit": {
+              "target": "Package",
+              "version": "[1.2.0, )"
+            },
+            "Xamarin.Essentials": {
+              "target": "Package",
+              "version": "[1.6.1, )"
+            },
+            "Xamarin.Forms": {
+              "target": "Package",
+              "version": "[5.0.0.2012, )"
+            }
+          }
+        }
+      }
+    },
+    "/Users/dmi-it/Documents/Xamrin practices/LoginMvvm/LoginMvvm/LoginMvvm.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/dmi-it/Documents/Xamrin practices/LoginMvvm/LoginMvvm/LoginMvvm.csproj",
+        "projectName": "LoginMvvm",
+        "projectPath": "/Users/dmi-it/Documents/Xamrin practices/LoginMvvm/LoginMvvm/LoginMvvm.csproj",
+        "packagesPath": "/Users/dmi-it/.nuget/packages/",
+        "outputPath": "/Users/dmi-it/Documents/Xamrin practices/LoginMvvm/LoginMvvm/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/dmi-it/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "targetAlias": "netstandard2.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
+          "dependencies": {
+            "JetBrains.Annotations": {
+              "target": "Package",
+              "version": "[2021.2.0, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "Realm": {
+              "target": "Package",
+              "version": "[10.3.0, )"
+            },
+            "Rg.Plugins.Popup": {
+              "target": "Package",
+              "version": "[2.0.0.12, )"
+            },
+            "Syncfusion.Xamarin.Buttons": {
+              "target": "Package",
+              "version": "[19.2.0.57, )"
+            },
+            "Syncfusion.Xamarin.SfPopupLayout": {
+              "target": "Package",
+              "version": "[19.2.0.62, )"
+            },
+            "Xamarin.CommunityToolkit": {
+              "target": "Package",
+              "version": "[1.2.0, )"
+            },
+            "Xamarin.Essentials": {
+              "target": "Package",
+              "version": "[1.6.1, )"
+            },
+            "Xamarin.Forms": {
+              "target": "Package",
+              "version": "[5.0.0.2012, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.401/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
